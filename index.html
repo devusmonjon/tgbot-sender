@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Themed Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center text-light">Form</h1>
+        <form id="apiForm" class="bg-dark p-4 rounded">
+            <div class="form-group">
+                <label for="api_token" class="text-light">API_TOKEN</label>
+                <input type="text" class="form-control" id="api_token" name="api_token" required>
+            </div>
+
+            <div class="form-group">
+                <label for="method" class="text-light">Method</label>
+                <input type="text" class="form-control" id="method" name="method" required>
+            </div>
+
+            <div class="form-group">
+                <label for="chat_id" class="text-light">Chat ID</label>
+                <input type="text" class="form-control" id="chat_id" name="chat_id" required>
+            </div>
+
+            <div class="form-group">
+                <label for="from_chat_id" class="text-light">From Chat ID</label>
+                <input type="text" class="form-control" id="from_chat_id" name="from_chat_id">
+            </div>
+
+            <div class="form-group">
+                <label for="message_id" class="text-light">Message ID</label>
+                <input type="text" class="form-control" id="message_id" name="message_id">
+            </div>
+
+            <div class="form-group">
+                <label for="reply_to_message_id" class="text-light">Reply to Message ID</label>
+                <input type="text" class="form-control" id="reply_to_message_id" name="reply_to_message_id">
+            </div>
+
+            <div class="form-group">
+                <label for="text" class="text-light">Text</label>
+                <textarea class="form-control" id="text" name="text" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="caption" class="text-light">Caption</label>
+                <textarea class="form-control" id="caption" name="caption" rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="photo" class="text-light">photo</label>
+                <input type="text" class="form-control" id="photo" name="photo">
+            </div>
+
+            <div class="form-group">
+                <label for="video" class="text-light">video</label>
+                <input type="text" class="form-control" id="video" name="video">
+            </div>
+
+            <div class="form-group">
+                <label for="document" class="text-light">document</label>
+                <input type="text" class="form-control" id="document" name="document">
+            </div>
+
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="disable_web_page_preview"
+                    name="disable_web_page_preview">
+                <label class="form-check-label text-light" for="disable_web_page_preview">Disable Web Page
+                    Preview</label>
+            </div>
+
+            <select class="form-select" aria-label="Default select example mt-5">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <h2 class="text-light">Inline Keyboards</h2>
+            <div id="inline-keyboards">
+                <div class="inline-key">
+                    <div class="form-group">
+                        <label for="inline_text" class="text-light">Text</label>
+                        <input type="text" class="form-control" id="inline_text" name="inline_text">
+                    </div>
+                    <div class="form-group">
+                        <label for="inline_url" class="text-light">URL</label>
+                        <input type="url" class="form-control" id="inline_url" name="inline_url">
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            <div class="alert alert-success mt-5 hide" id="alert-success" role="alert">
+                {message}
+            </div>
+            <div class="alert alert-danger mt-5 hide" id="alert-danger" role="alert">
+                {message}
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
